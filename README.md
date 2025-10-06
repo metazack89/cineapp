@@ -1,16 +1,82 @@
-# React + Vite
+# 🎬 CineApp – Clon Creativo de Netflix
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Preview](src/assets/Clone-Netflix.jpg)
 
-Currently, two official plugins are available:
+> “Luces, cámara… ¡acción! 🎥 Bienvenido a **CineApp**, un homenaje visual y funcional al universo del streaming.”
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚫 Importante
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⚠️ **Este proyecto no puede abrirse directamente desde el navegador público.**
+Google puede interpretarlo erróneamente como un intento de _phishing_ debido a su gran parecido visual con Netflix.
 
-## Expanding the ESLint configuration
+👉 En su lugar, clónalo y ejecútalo localmente para disfrutarlo sin restricciones:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/metazack89/cineapp.git
+cd cineapp
+npm install
+npm run dev
+```
+
+Cuando esté listo para producción:
+
+```bash
+npm run build
+firebase deploy
+```
+
+El proyecto se despliega automáticamente a Firebase Hosting a través de GitHub Actions 💫
+
+---
+
+## 🧠 ¿Qué es CineApp?
+
+**CineApp** es una réplica moderna y experimental del entorno de Netflix, creada con fines educativos y de práctica de desarrollo frontend y backend ligero.
+Su objetivo es recrear la experiencia visual, las animaciones y la estructura de navegación de una plataforma de streaming real.
+
+---
+
+## 🛠️ Tecnologías que dan vida a CineApp
+
+✨ **Frontend futurista**
+
+- ⚛️ **React 19** – Componentes declarativos, ganchos y rendimiento puro.
+- 🧭 **React Router DOM 7** – Navegación fluida entre secciones y páginas dinámicas.
+- 🎉 **React Toastify** – Notificaciones elegantes para mejorar la interacción del usuario.
+- ⚡ **Vite 7** – Compilación ultrarrápida con recarga instantánea.
+
+🔥 **Backend ligero con superpoderes**
+
+- ☁️ **Firebase 12** – Autenticación, hosting y base de datos en tiempo real.
+- 🚀 **react-firebase-hooks** – Integración directa con los servicios de Firebase.
+
+🧹 **Código limpio y elegante**
+
+- 🧩 **ESLint + Plugins de React** – Mantiene un estilo de código uniforme y profesional.
+- 🌍 **Globals & Type Definitions** – Facilita el desarrollo tipado y predecible.
+
+---
+
+## ⚙️ Configuración rápida
+
+1. Crea un proyecto en [Firebase Console](https://console.firebase.google.com)
+2. Configura tus credenciales en `.env`
+3. Ejecuta:
+
+   ```bash
+   npm run build
+   firebase deploy
+   ```
+
+4. ¡Listo! Tu CineApp estará disponible en el hosting configurado ✨
+
+---
+
+## 💡 Nota final
+
+CineApp **no tiene fines comerciales**.
+Es un proyecto educativo que explora cómo combinar **Firebase + React + Vite** para crear experiencias web ricas y modernas.
+
+🎬 _El show debe continuar… ¡pero el código también!_
