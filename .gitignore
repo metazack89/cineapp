@@ -25,5 +25,4 @@ dist-ssr
 # Optional npm cache directory
 .env
 .env.local
-.github
 .firebase
