@@ -1,0 +1,121 @@
+/* Estilos principales del contenedor de la barra de navegación */
+.navbar {
+  width: 100%; /* La navbar ocupa todo el ancho de la pantalla */
+  padding: 20px 6%; /* Espaciado interno arriba/abajo 20px y laterales 6% */
+  display: flex; /* Distribuye elementos en fila */
+  justify-content: space-between; /* Espacia el contenido a los lados (izquierda y derecha) */
+  position: fixed; /* La navbar queda fija en la parte superior al hacer scroll */
+  font-size: 14px; /* Tamaño de texto base */
+  color: #e5e5e5; /* Color del texto */
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  ); /* Degradado negro en la parte superior */
+  z-index: 1; /* Se asegura que la navbar quede por encima de otros elementos */
+}
+
+/* Contenedor izquierdo de la navbar (logo + menú) */
+.navbar-left {
+  display: flex; /* Elementos en fila */
+  align-items: center; /* Alinea verticalmente los elementos */
+  gap: 50px; /* Espaciado entre logo y menú */
+}
+
+/* Logo dentro de la navbar */
+.navbar-left img {
+  width: 90px; /* Tamaño del logo */
+}
+
+/* Lista de navegación (menú) */
+.navbar-left ul {
+  display: flex; /* Muestra los ítems en fila */
+  list-style: none; /* Elimina los puntos de la lista */
+  gap: 20px; /* Espaciado entre ítems del menú */
+}
+
+/* Ítems individuales del menú */
+.navbar-left ul li {
+  cursor: pointer; /* Cambia cursor a mano al pasar por encima */
+}
+
+/* Contenedor derecho de la navbar (íconos, perfil, etc.) */
+.navbar-right {
+  display: flex; /* Coloca elementos en fila */
+  gap: 20px; /* Espaciado entre ítems */
+  align-items: center; /* Centra verticalmente */
+}
+
+/* Íconos dentro de la sección derecha */
+.navbar-right .icons {
+  width: 20px; /* Tamaño de íconos */
+  cursor: pointer; /* Hacible clic */
+}
+
+/* Imagen de perfil */
+.navbar-right .profile {
+  border-radius: 4px; /* Bordes redondeados */
+  height: 30px; /* Altura fija */
+}
+
+/* Contenedor del perfil (imagen + dropdown) */
+.navbar-profile {
+  display: flex; /* Coloca elementos en fila */
+  align-items: center; /* Centra verticalmente */
+  gap: 10px; /* Espaciado entre elementos */
+  cursor: pointer; /* Interactivo */
+  position: relative; /* Necesario para posicionar el dropdown */
+}
+
+/* Estilo del menú desplegable */
+.navbar .dropdown {
+  position: absolute; /* Se posiciona relativo al navbar-profile */
+  top: 100%; /* Aparece justo debajo */
+  right: 0; /* Alineado al lado derecho */
+  width: max-content; /* Se ajusta al contenido */
+  background: #191919; /* Fondo oscuro */
+  padding: 18px 22px; /* Espaciado interno */
+  border-radius: 2px; /* Bordes ligeramente redondeados */
+  text-decoration: underline; /* Texto subrayado */
+  z-index: 1; /* Se muestra por encima de otros elementos */
+  display: none; /* Oculto por defecto */
+}
+
+/* Ítems dentro del dropdown */
+.navbar .dropdown p {
+  font-size: 13px; /* Tamaño pequeño */
+  cursor: pointer; /* Interactivo */
+}
+
+/* Muestra el dropdown al pasar el mouse sobre el perfil */
+.navbar-profile:hover .dropdown {
+  display: block; /* Visible al hover */
+}
+
+/* Variante de navbar con fondo sólido */
+.nav-dark {
+  background: #141414; /* Fondo oscuro fijo */
+}
+
+/* Responsividad para pantallas medianas (máx. 800px) */
+@media (max-width: 800px) {
+  .navbar {
+    padding: 20px 4%; /* Menos padding lateral */
+  }
+  .navbar-left ul {
+    display: none; /* Oculta el menú de texto */
+  }
+  .navbar img {
+    height: 25px; /* Logo más pequeño */
+  }
+}
+
+/* Responsividad para pantallas pequeñas (máx. 500px) */
+@media (max-width: 500px) {
+  .navbar img {
+    height: 20px; /* Logo aún más pequeño */
+  }
+  .navbar-right {
+    gap: 10px; /* Menos espacio entre elementos derechos */
+  }
+}

@@ -1,0 +1,75 @@
+/* Estilo general del contenedor de tarjetas */
+.title-cards {
+  margin-top: 50px; /* Espacio superior */
+  margin-bottom: 30px; /* Espacio inferior */
+}
+
+/* Estilo del título (h2) dentro de title-cards */
+.title-cards h2 {
+  margin-bottom: 8px; /* Separación con las tarjetas */
+}
+
+/* Contenedor que organiza las tarjetas en fila */
+.card-list {
+  display: flex; /* Coloca las tarjetas en línea horizontal */
+  gap: 10px; /* Espacio entre tarjetas */
+  overflow-x: scroll; /* Permite el desplazamiento horizontal */
+}
+
+/* Oculta la barra de scroll en navegadores Webkit (Chrome, Safari) */
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilos de las imágenes dentro de las tarjetas */
+.card-list img {
+  width: 240px; /* Ancho fijo de las imágenes */
+  border-radius: 4px; /* Bordes ligeramente redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar encima */
+}
+
+/* Cada tarjeta tiene posición relativa para permitir posicionar texto encima */
+.card-list .card {
+  position: relative;
+}
+
+/* Texto (título) que aparece sobre la tarjeta */
+.card-list .card p {
+  position: absolute; /* Se posiciona dentro de la tarjeta */
+  bottom: 10px; /* 10px desde abajo */
+  right: 10px; /* 10px desde la derecha */
+  text-decoration: none; /* Sin subrayado */
+  color: #fff; /* Color blanco para contraste */
+}
+
+/* ---- Responsividad ---- */
+
+/* Pantallas menores a 800px (tablets, pantallas medianas) */
+@media (max-width: 800px) {
+  .title-cards {
+    margin-top: 20px; /* Reduce márgenes superiores */
+    margin-bottom: 0; /* Quita el margen inferior */
+  }
+  .title-cards h2 {
+    font-size: 20px; /* Reduce el tamaño del título */
+  }
+  .card-list img {
+    width: 200px; /* Reduce el ancho de las imágenes */
+  }
+  .card-list p {
+    font-size: 12px; /* Texto más pequeño */
+  }
+}
+
+/* Pantallas menores a 500px (celulares pequeños) */
+@media (max-width: 500px) {
+  .title-cards h2 {
+    font-size: 15px; /* Aún más pequeño el título */
+  }
+  .card-list img {
+    width: 165px; /* Tarjetas más angostas */
+  }
+  .card-list p {
+    font-size: 10px; /* Texto mínimo legible */
+  }
+}

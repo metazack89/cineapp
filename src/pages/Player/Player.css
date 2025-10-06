@@ -1,0 +1,54 @@
+/* Contenedor principal del reproductor */
+.player {
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex; /* Usamos flexbox */
+  flex-direction: column; /* Organiza los elementos en columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilo para la flecha de retroceso */
+.player img {
+  position: absolute; /* Posición absoluta respecto al contenedor */
+  top: 20px; /* A 20px del borde superior */
+  left: 20px; /* A 20px del borde izquierdo */
+  width: 50px; /* Tamaño fijo */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilo para el iframe del video */
+.player iframe {
+  width: 80%; /* Ocupa el 80% del ancho de la pantalla */
+  aspect-ratio: 16/9; /* Mantiene la proporción estándar de video */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Contenedor con la información debajo del video */
+.player-info {
+  display: flex; /* Flexbox para organizar en fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Separa los elementos */
+  width: 80%; /* Ocupa el 80% del ancho */
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 800px) {
+  .player iframe {
+    width: 90%; /* Aumenta el ancho del video en pantallas más pequeñas */
+  }
+  .player-info {
+    font-size: 14px; /* Texto más pequeño */
+    width: 90%; /* Más ancho en pantallas reducidas */
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 500px) {
+  .player-info {
+    font-size: 12px; /* Texto aún más pequeño */
+    flex-direction: column; /* Pone los elementos en columna */
+    align-items: start; /* Alinea los textos a la izquierda */
+    gap: 8px; /* Espacio entre los elementos */
+    margin-top: 8px; /* Margen superior para separar del iframe */
+  }
+}

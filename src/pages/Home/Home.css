@@ -1,0 +1,138 @@
+/* Contenedor principal del hero */
+.hero {
+  position: relative; /* Los hijos con posición absoluta se posicionan respecto a este */
+}
+
+/* Imagen principal del banner */
+.banner-img {
+  width: 100%; /* Ocupar todo el ancho disponible */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 75%
+  ); /* Degradado para desvanecer parte de la imagen */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 75%
+  ); /* Prefijo correcto para navegadores Webkit */
+}
+
+/* Contenedor de textos y botones que se superpone al banner */
+.hero-caption {
+  position: absolute; /* Se coloca sobre la imagen */
+  width: 100%; /* Ocupa todo el ancho */
+  padding-left: 6%; /* Margen lateral izquierdo */
+  bottom: 0; /* Se pega al borde inferior */
+}
+
+/* Imagen dentro del caption (ejemplo: logo o título) */
+.caption-img {
+  width: 90%;
+  max-width: 420px;
+  margin-bottom: 30px;
+}
+
+/* Texto descriptivo dentro del caption */
+.hero-caption p {
+  max-width: 700px;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de los botones */
+.hero-btns {
+  display: flex; /* Coloca los botones en fila */
+  gap: 10px; /* Espacio entre botones */
+  margin-bottom: 50px;
+}
+
+/* Iconos dentro de los botones */
+.hero-btns .btn img {
+  width: 25px;
+}
+
+/* Estilos generales de los botones */
+.hero-btns .btn {
+  border: 0;
+  outline: 0;
+  padding: 8px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Botón oscuro */
+.hero-btns .btn.dark-btn {
+  color: #fff;
+  background: #6d6d6eb3;
+}
+
+/* Hover en botón claro */
+.hero-btns .btn:hover {
+  background: #ffffffbf;
+}
+
+/* Hover en botón oscuro */
+.hero-btns .btn.dark-btn:hover {
+  background: #6d6d6e66;
+}
+
+/* Sección con más tarjetas debajo del hero */
+.more-cards {
+  padding-left: 6%;
+}
+
+/* -------- MEDIA QUERIES -------- */
+
+/* Pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+  .hero-caption .title-cards {
+    display: none; /* Oculta tarjetas en el caption */
+  }
+  .hero-btns {
+    margin-bottom: 30px;
+  }
+}
+
+/* Pantallas pequeñas (hasta 800px) */
+@media (max-width: 800px) {
+  .hero-caption {
+    padding-left: 4%;
+  }
+  .caption-img {
+    margin-bottom: 10px;
+    width: 40%;
+  }
+  .hero-caption p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .hero-btns .btn img {
+    width: 20px;
+  }
+  .more-cards {
+    /* Se corrigió el posible error de .nore-cards */
+    padding-left: 4%;
+  }
+}
+
+/* Pantallas muy pequeñas (hasta 500px) */
+@media (max-width: 500px) {
+  .caption-img {
+    display: none; /* Se oculta para ahorrar espacio */
+  }
+  .hero-btns .btn img {
+    width: 15px;
+  }
+  .hero-btns .btn {
+    padding: 4px 10px;
+    gap: 5px;
+    font-size: 10px;
+  }
+}

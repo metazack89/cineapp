@@ -1,0 +1,46 @@
+/* Estilos generales para el contenedor principal del footer */
+.footer {
+  padding: 30px 4%; /* Espaciado interno en todos los lados (30px arriba/abajo y 4% a los lados) */
+  max-width: 1000px; /* Ancho máximo del footer */
+  margin: 0 auto; /* Centra el footer horizontalmente */
+}
+
+/* Contenedor de los íconos de redes sociales */
+.footer-icons {
+  display: flex; /* Coloca los íconos en fila (horizontal) */
+  gap: 20px; /* Espacio entre íconos */
+  margin: 40px 0; /* Margen superior e inferior */
+}
+
+/* Estilos de cada ícono dentro del footer */
+.footer-icons img {
+  width: 30px; /* Tamaño de los íconos */
+  cursor: pointer; /* Cambia el cursor a "mano" al pasar por encima */
+}
+
+/* Lista de enlaces dentro del footer */
+.footer ul {
+  display: grid; /* Muestra los elementos en cuadrícula */
+  grid-template-columns: auto auto auto auto; /* 4 columnas automáticas */
+  gap: 15px; /* Espacio entre los elementos */
+  margin-bottom: 30px; /* Espacio debajo de la lista */
+  list-style: none; /* Elimina los puntos de lista */
+}
+
+/* Estilo para el texto de copyright */
+.copyright-text {
+  color: gray; /* Texto en gris */
+  font-size: 14px; /* Tamaño de letra pequeño */
+}
+
+/* Estilos responsivos para pantallas más pequeñas (hasta 800px) */
+@media (max-width: 800px) {
+  .footer-icons img {
+    width: 25px; /* Reduce el tamaño de los íconos */
+  }
+  .footer ul {
+    grid-template-columns: auto auto; /* Reduce la cuadrícula a 2 columnas */
+    gap: 8px; /* Menor separación entre elementos */
+    font-size: 14px; /* Texto un poco más pequeño */
+  }
+}
